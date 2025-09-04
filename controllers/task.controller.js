@@ -20,7 +20,7 @@ const createTask = async (req, res) => {
 const getTasks = async (req, res) => {
   try {
     const tasks = await TaskModel.find();
-    res.json({message : tasks});
+    res.json(tasks);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
